@@ -38,7 +38,7 @@ public class PasteController {
         Paste create = service.create(request.getContent(), request.getTtl_seconds(), request.getMax_views(), httpServletRequest);
 
         return  ResponseEntity.ok(Map.of("id", create.getId().toString(),
-                "url", "https://pastebin-frontend-1s1ek4s8d-rohinis-projects-c95122e8.vercel.app/p/"+create.getId())
+                "url", "https://pastebin-backend-production-57eb.up.railway.app/p/"+create.getId())
         );
     }
 
